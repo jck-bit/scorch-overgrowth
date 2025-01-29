@@ -4,6 +4,7 @@ import { useState, useRef } from 'react';
 import ReactMarkdown from 'react-markdown';
 import { motion, AnimatePresence } from 'framer-motion';
 import remarkGfm from 'remark-gfm';
+import Link from 'next/link';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -302,9 +303,11 @@ export default function Home() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="text-center mb-12">
-                  <div className="inline-block px-4 py-1.5 font-michroma bg-gray-900/80  border border-orange-300 text-white rounded-full text-sm font-medium mb-6">
-                    Built by Kinyanjui
-                  </div>
+                  <Link href="https://kinyanjuis-website.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <div className="inline-block px-4 py-1.5 font-michroma bg-gray-900/80  border border-orange-300 text-white rounded-full text-sm font-medium mb-6">
+                      Built by Kinyanjui
+                    </div>
+                  </Link>
 
                   <p className="text-xl text-gray-600 font-md font-light font-orbitron max-w-2xl mx-auto leading-relaxed">
                     WARNING: Partial data corruption detected - verify all results
@@ -338,7 +341,7 @@ export default function Home() {
                         className="px-6 py-1.5 bg-orange-900/80 text-orange-300 rounded-lg hover:bg-orange-800/90 disabled:opacity-50 
                                   disabled:cursor-not-allowed text-sm font-medium relative overflow-hidden group border border-orange-800"
                       >
-                        <span className="relative z-10">{isLoading ? 'Thinking...' : 'Send'}</span>
+                        <span className="relative z-10">{isLoading ? 'Thinking ...' : 'Send'}</span>
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-white/15 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                       </button>
                     </div>
@@ -726,7 +729,7 @@ export default function Home() {
                   className="px-4 py-1.5 bg-orange-900/80 text-orange-300 rounded-md hover:bg-orange-800/90 disabled:opacity-50 
       disabled:cursor-not-allowed text-sm font-medium relative overflow-hidden group border border-orange-800"
                 >
-                  <span className="relative z-10">{isLoading ? 'Thinking' : 'Send'}</span>
+                  <span className="relative z-10">{isLoading ? 'Thinking ...' : 'Send'}</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:via-white/15 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 </button>
               </div>
