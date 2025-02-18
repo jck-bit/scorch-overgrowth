@@ -1,6 +1,6 @@
 # Scorch Overgrowth - AI-Powered Web Browser
 
-A sophisticated web browser implementation that combines advanced search capabilities with AI-powered analysis using Deepseek-R1 and Tavily API.
+A  web browser implementation that combines advanced search capabilities with AI-powered analysis using Deepseek-R1 and Tavily API.
 
 ## 🔍 Technical Overview
 
@@ -89,13 +89,6 @@ The browser functions as an AI-augmented search interface that combines web sear
   - Markdown support with syntax highlighting
   - Loading states and animations
 
-## 🛠 Technical Stack
-
-- **Frontend**: Next.js 14, React, TailwindCSS
-- **Backend**: Edge Runtime, Streaming API
-- **AI Integration**: Deepseek-R1
-- **Search Engine**: Tavily API
-
 
 ## 📋 Prerequisites
 
@@ -103,9 +96,6 @@ The browser functions as an AI-augmented search interface that combines web sear
 - Deepseek API key
 - Tavily API key
 
-## ⚙️ Environment Variables
-
-Create a `.env.local` file in the root directory:
 
 ## 🚀 Installation
 
@@ -120,6 +110,18 @@ cd scorch-overgrowth
 
 ```bash
 npm install
+```
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file in the root directory:
+
+```bash
+# Deepseek
+DEEPSEEK_API_KEY=your_deepseek_api_key
+
+# Tavily
+TAVILY_API_KEY=your_tavily_api_key
 ```
 
 3. Run the development server:
@@ -268,14 +270,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - **Authentication**: Firebase
 - **Database**: Firestore
 - **Storage**: Firebase Storage
-
-## 📋 Prerequisites
-
-- Node.js 18+ and npm
-- Firebase account
-- Deepseek API key
-- Tavily API key
-
-## ⚙️ Environment Variables
-
-Create a `.env.local` file in the root directory:
